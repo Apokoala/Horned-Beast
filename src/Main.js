@@ -1,19 +1,20 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import data from './data.json'
+// import data from './data.json'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
 
 class Main extends React.Component {
   render() {
     return (
       //<> </> are fragments which act as a parent.
       <Row sm={1} md={2} lg={4} xl={5}>
-        {data.map(hornedObject => (
+        {this.props.data.map(hornedObject => (
             <HornedBeast
             title={hornedObject.title}
             imageUrl={hornedObject.image_url}
-            description={hornedObject.description} />
+            description={hornedObject.description}
+            handleOpen = {this.props.handleOpen}/>
 
         ))}
 
