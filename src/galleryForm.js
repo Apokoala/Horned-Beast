@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import data from './data.json';
-import HornedBeast from './HornedBeast';
+// import HornedBeast from './HornedBeast';
 
 
 class Gallery extends React.Component {
