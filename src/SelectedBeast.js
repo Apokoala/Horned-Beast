@@ -25,5 +25,4 @@ class SelectedBeast extends React.Component {
   }
 }
 
-export default SelectedBeast
-  ;
+export default SelectedBeast;

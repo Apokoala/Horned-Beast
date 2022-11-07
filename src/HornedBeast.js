@@ -1,14 +1,14 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 class HornedBeast extends React.Component {
   //anytime you have state inside an object you have to have a constructor to instantiate the props.
   constructor(props) {
     super(props);
     this.state = {
-      favorites: ""
+      favorites: "",
     }
   }
 
