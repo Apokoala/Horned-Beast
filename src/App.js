@@ -5,6 +5,7 @@ import './App.css';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+// import Form from 'react-bootstrap';
 import data from './data.json';
 import SelectedBeast from './SelectedBeast';
 
@@ -13,30 +14,45 @@ class App extends React.Component {
     super(props);
     this.state = {
       show: false,
-      handleSelection: {}
+      handleSelection: {},
+      beasts: data,
+
     }
   }
 
-  handleOpen = (handleSelection) => this.setState ({ show: true, handleSelection });
+
+  handleOpen = (beast) => this.setState ({handleSelection: beast, show: true});
   handleClose = () => this.setState({ show: false });
+  galleryChange = (numHorns) => this.setState({beasts: numHorns})
+
+  // sendHorns = (event) =>{
+  // event.preventDefault();
+  // const select = Number(event.target.value);
+  // let element
+  // select ? element = data.filter(beast => beast.horns === select) : element = data;
+  // this.setstate({beasts:element});
+  // }
 
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header />>
+
         <Main
-          data={data}
           handleOpen = {this.handleOpen}
+          data={this.state.beasts}
+          galleryChange={this.galleryChange}
         />
         <SelectedBeast
-          handleClose={this.handleClose}
           show={this.state.show}
-          handleSelection={this.state.handleSelection}/>
+          handleSelection={this.state.handleSelection}
+          handleClose={this.handleClose}/>
         <Footer />
       </div>
     );
   }
 }
+
 
 export default App;
