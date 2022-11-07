@@ -4,7 +4,7 @@ import HornedBeast from './HornedBeast';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 // import { Container } from 'react-bootstrap';
-import data from './data.json';
+// import data from './data.json';
 import Gallery from './galleryForm';
 
 class Main extends React.Component {
